@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<style type="text/css">
+.fd
+{
+text-align:center;
+color:#06F;	
+//background-color:;
+}
+h1
+{
+	color:black;
+text-align:center;
+text-shadow: 5px 5px 5px red;
+//text-color:brown;
+
+}
+body
+{
+	background-color:none;
+}
+
+
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Feedback</title>
+</head>
+
+<body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=317146438410827";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<h1>Feedback form</h1>
+
+<form id="form1" name="form1" method="post" action="sendmail.php" class="fd">
+  <p>
+    <label for="Name"> Your Name</label>
+    <input type="text" name="Name" id="Name" />
+  </p>
+  <p>
+    <label for="email">	Your Email</label>
+    <input type="text" name="email" id="email" />
+  </p>
+  <p>
+    <label for="Feedback">Your Feedback</label>
+    <textarea name="Feedback" id="Feedback" cols="45" rows="5"></textarea>
+  </p>
+  <p>
+    <input type="submit" name="submit" id="submit" value="Submit" />
+  </p>
+</form>
+<h2>If you have Facebook Account ,Then you can give comments about the website </h2>
+<div class="fb-comments" data-href="https://www.facebook.com/Pnrstatusonline" data-width="470" data-num-posts="10"></div>
+</body>
+</html>
