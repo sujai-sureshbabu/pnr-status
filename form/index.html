@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Feedback</title>
+<link rel="stylesheet" type="text/css" href="view.css" media="all">
+<script type="text/javascript" src="view.js"></script>
+<script>
+function validateForm()
+{
+var name=document.forms["feedbackform"]["Name"].value;
+var email=document.forms["feedbackform"]["email"].value;
+var feed=document.forms["feedbackform"]["Feedback"].value;
+
+alert("hai");
+var pattern=/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+
+if(name=="" || name==null || name.length <3 )
+{
+alert("Enter name");
+return false;
+}
+else if( !email.match(pattern))
+{
+alert("Enter email");
+return false;
+}
+else if(feed=="" || feed==null || feed.length <3 )
+{
+alert("Enter feedback");
+return false;
+}
+else
+{
+return true;
+}
+}
+
+
+</script>
+</head>
+<body id="main_body" >
+	
+	<img id="top" src="top.png" alt="">
+	<div id="form_container">
+	
+		<h1><a>Feedback</a></h1>
+		<form id="form_629798" name="feedbackform" onsubmit="return validateForm()" class="appnitro"  method="post" action="sendmail.php">
+					<div class="form_description">
+			<h2>Traininfo.tk</h2>
+			<p>please provide us your feedback,it is valuable to us</p>
+		</div>						
+			<ul >
+			
+					<li id="li_1" >
+		<label class="description" for="element_1">Name </label>
+		<div>
+			<input id="element_1" name="Name" class="element text medium" type="text" maxlength="255" value=""/> 
+		</div><p class="guidelines" id="guide_1"><small>Enter your name </small></p> 
+		</li>		<li id="li_2" >
+		<label class="description" for="element_2">Email </label>
+		<div>
+			<input id="element_2" name="email" class="element text medium" type="text" maxlength="255" value=""/> 
+		</div><p class="guidelines" id="guide_2"><small>Enter your email id</small></p> 
+		</li>		<li id="li_3" >
+		<label class="description" for="element_3">Message </label>
+		<div>
+			<textarea id="element_3" name="Feedback" class="element textarea medium"></textarea> 
+		</div><p class="guidelines" id="guide_3"><small>Enter your feedback message</small></p> 
+		</li>
+			
+					<li class="buttons">
+			    <input type="hidden" name="form_id" value="629798" />
+			    
+				<input id="saveForm" class="myButton" type="submit" name="submit" onclick="validateForm()" value="Send" />
+		</li>
+			</ul>
+		</form>	
+		
+	</div>
+	<img id="bottom" src="bottom.png" alt="">
+	</body>
+</html>
